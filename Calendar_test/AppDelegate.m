@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "AddEventViewController.h"
+#import "KFAddEventViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,9 +20,7 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    self.window.backgroundColor = [UIColor greenColor];
-
-    AddEventViewController *viewController = [[AddEventViewController alloc] init];
+    KFAddEventViewController *viewController = [[KFAddEventViewController alloc] init];
 
     self.window.rootViewController = viewController;
 

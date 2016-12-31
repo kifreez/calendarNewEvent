@@ -13,7 +13,8 @@
 		1F1C678B1E16E299008EC714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1C67891E16E299008EC714 /* Main.storyboard */; };
 		1F1C678D1E16E299008EC714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F1C678C1E16E299008EC714 /* Assets.xcassets */; };
 		1F1C67901E16E299008EC714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1C678E1E16E299008EC714 /* LaunchScreen.storyboard */; };
-		1FE88A2C1E17001B00C37A31 /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE88A2B1E17001B00C37A31 /* AddEventViewController.m */; };
+		1FE88A2C1E17001B00C37A31 /* KFAddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE88A2B1E17001B00C37A31 /* KFAddEventViewController.m */; };
+		1FE88A321E17C4E200C37A31 /* KFEventNameField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE88A311E17C4E200C37A31 /* KFEventNameField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +28,10 @@
 		1F1C678C1E16E299008EC714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F1C678F1E16E299008EC714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F1C67911E16E299008EC714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FE88A2A1E17001B00C37A31 /* AddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
-		1FE88A2B1E17001B00C37A31 /* AddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
+		1FE88A2A1E17001B00C37A31 /* KFAddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFAddEventViewController.h; sourceTree = "<group>"; };
+		1FE88A2B1E17001B00C37A31 /* KFAddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFAddEventViewController.m; sourceTree = "<group>"; };
+		1FE88A301E17C4E200C37A31 /* KFEventNameField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFEventNameField.h; sourceTree = "<group>"; };
+		1FE88A311E17C4E200C37A31 /* KFEventNameField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFEventNameField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +66,9 @@
 			children = (
 				1F1C67831E16E299008EC714 /* AppDelegate.h */,
 				1F1C67841E16E299008EC714 /* AppDelegate.m */,
-				1F1C67861E16E299008EC714 /* ViewController.h */,
-				1F1C67871E16E299008EC714 /* ViewController.m */,
-				1FE88A2A1E17001B00C37A31 /* AddEventViewController.h */,
-				1FE88A2B1E17001B00C37A31 /* AddEventViewController.m */,
+				1FE88A331E17CE9C00C37A31 /* ViewControllers */,
+				1FE88A301E17C4E200C37A31 /* KFEventNameField.h */,
+				1FE88A311E17C4E200C37A31 /* KFEventNameField.m */,
 				1F1C67891E16E299008EC714 /* Main.storyboard */,
 				1F1C678C1E16E299008EC714 /* Assets.xcassets */,
 				1F1C678E1E16E299008EC714 /* LaunchScreen.storyboard */,
@@ -82,6 +84,17 @@
 				1F1C67811E16E299008EC714 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FE88A331E17CE9C00C37A31 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F1C67861E16E299008EC714 /* ViewController.h */,
+				1F1C67871E16E299008EC714 /* ViewController.m */,
+				1FE88A2A1E17001B00C37A31 /* KFAddEventViewController.h */,
+				1FE88A2B1E17001B00C37A31 /* KFAddEventViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +123,7 @@
 		1F1C67751E16E299008EC714 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = KF;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = KifApp;
 				TargetAttributes = {
@@ -157,8 +171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F1C67881E16E299008EC714 /* ViewController.m in Sources */,
-				1FE88A2C1E17001B00C37A31 /* AddEventViewController.m in Sources */,
+				1FE88A2C1E17001B00C37A31 /* KFAddEventViewController.m in Sources */,
 				1F1C67851E16E299008EC714 /* AppDelegate.m in Sources */,
+				1FE88A321E17C4E200C37A31 /* KFEventNameField.m in Sources */,
 				1F1C67821E16E299008EC714 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddEventViewController : UITableViewController
+@interface KFAddEventViewController : UIViewController
 
 @end
