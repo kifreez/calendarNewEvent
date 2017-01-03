@@ -10,4 +10,7 @@
 
 @interface KFEventNameField : UITextField
 
+-(CGRect)textRectForBounds:(CGRect)bounds;
+-(CGRect)editingRectForBounds:(CGRect)bounds;
+
 @end

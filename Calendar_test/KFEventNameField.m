@@ -7,6 +7,7 @@
 //
 
 #import "KFEventNameField.h"
+#import "QuartzCore/QuartzCore.h"
 
 @interface KFEventNameField ()
 
@@ -18,15 +19,17 @@
 
     self = [super init];
 
-    if (self != nil) {
-
-        self.borderStyle = UITextBorderStyleRoundedRect;
-        self.backgroundColor = [UIColor whiteColor];
-        self.placeholder = @"Add name for event";
-    }
-
     return self;
 
+}
+
+-(CGRect)textRectForBounds:(CGRect)bounds {
+
+    return CGRectMake(bounds.origin.x, bounds.origin.y, bounds.size.width, bounds.size.height - 2);
+}
+-(CGRect)editingRectForBounds:(CGRect)bounds {
+
+    return [self textRectForBounds:bounds];
 }
 
 @end
