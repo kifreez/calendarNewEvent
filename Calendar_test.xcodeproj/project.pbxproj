@@ -15,6 +15,9 @@
 		1F1C67901E16E299008EC714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1C678E1E16E299008EC714 /* LaunchScreen.storyboard */; };
 		1FE88A2C1E17001B00C37A31 /* KFAddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE88A2B1E17001B00C37A31 /* KFAddEventViewController.m */; };
 		1FE88A321E17C4E200C37A31 /* KFEventNameField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE88A311E17C4E200C37A31 /* KFEventNameField.m */; };
+		1FF8A2411E19EEBC00F6C238 /* Montserrat-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FF8A23B1E19EDC300F6C238 /* Montserrat-ExtraLight.otf */; };
+		1FF8A2421E19EEBC00F6C238 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FF8A23E1E19EDC300F6C238 /* Montserrat-Regular.otf */; };
+		1FF8A2431E19EEBC00F6C238 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FF8A23F1E19EDC300F6C238 /* Montserrat-SemiBold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		1FE88A2B1E17001B00C37A31 /* KFAddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFAddEventViewController.m; sourceTree = "<group>"; };
 		1FE88A301E17C4E200C37A31 /* KFEventNameField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFEventNameField.h; sourceTree = "<group>"; };
 		1FE88A311E17C4E200C37A31 /* KFEventNameField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFEventNameField.m; sourceTree = "<group>"; };
+		1FF8A23B1E19EDC300F6C238 /* Montserrat-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.otf"; sourceTree = "<group>"; };
+		1FF8A23E1E19EDC300F6C238 /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		1FF8A23F1E19EDC300F6C238 /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		1F1C677F1E16E299008EC714 /* Calendar_test */ = {
 			isa = PBXGroup;
 			children = (
+				1FF8A2371E19ED6500F6C238 /* Resources */,
 				1F1C67831E16E299008EC714 /* AppDelegate.h */,
 				1F1C67841E16E299008EC714 /* AppDelegate.m */,
 				1FE88A331E17CE9C00C37A31 /* ViewControllers */,
@@ -95,6 +102,16 @@
 				1FE88A2B1E17001B00C37A31 /* KFAddEventViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1FF8A2371E19ED6500F6C238 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1FF8A23B1E19EDC300F6C238 /* Montserrat-ExtraLight.otf */,
+				1FF8A23E1E19EDC300F6C238 /* Montserrat-Regular.otf */,
+				1FF8A23F1E19EDC300F6C238 /* Montserrat-SemiBold.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +174,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF8A2411E19EEBC00F6C238 /* Montserrat-ExtraLight.otf in Resources */,
+				1FF8A2421E19EEBC00F6C238 /* Montserrat-Regular.otf in Resources */,
+				1FF8A2431E19EEBC00F6C238 /* Montserrat-SemiBold.otf in Resources */,
 				1F1C67901E16E299008EC714 /* LaunchScreen.storyboard in Resources */,
 				1F1C678D1E16E299008EC714 /* Assets.xcassets in Resources */,
 				1F1C678B1E16E299008EC714 /* Main.storyboard in Resources */,

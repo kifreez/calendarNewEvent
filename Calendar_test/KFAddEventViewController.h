@@ -10,4 +10,16 @@
 
 @interface KFAddEventViewController : UIViewController
 
+@property (nonatomic, strong) UIScrollView *scrlView;
+
+@property (nonatomic, strong) UITextField *eventNameField;
+
+@property (nonatomic, strong) UIButton *cancelButton;
+
+@property (nonatomic, strong) UIButton *doneButton;
+
+@property (nonatomic, strong) UIView *logoView;
+
+@property (nonatomic, strong) UILabel *eventLabel;
+
 @end

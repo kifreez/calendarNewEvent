@@ -3,7 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>UIAppFonts</key>
-	<array/>
+	<array>
+		<string>Montserrat-ExtraLight.otf</string>
+		<string>Montserrat-SemiBold.otf</string>
+		<string>Montserrat-Regular.otf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
