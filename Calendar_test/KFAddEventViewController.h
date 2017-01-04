@@ -15,5 +15,6 @@
 @property (strong, nonatomic) UIButton *doneButton;
 @property (strong, nonatomic) UIView *logoView;
 @property (strong, nonatomic) UILabel *eventLabel;
+@property (strong, nonatomic) UIView *bodyView;
 
 @end
