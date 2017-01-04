@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *doneButtonTopConstrain;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *eventNameFieldCenterYConstraint;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *logoViewTopConstrain;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *bodyViewTopConstraint;
 
 @end
 
@@ -45,7 +46,7 @@
     cSecondBackground.font = [UIFont fontWithName:@"Montserrat-Regular" size:400.f];
     cSecondBackground.translatesAutoresizingMaskIntoConstraints = false;
 
-    NSLayoutConstraint *cSecondBackgroundBottom = [NSLayoutConstraint constraintWithItem:cSecondBackground attribute:NSLayoutAttributeBottom  relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.f constant:130.f ];
+    NSLayoutConstraint *cSecondBackgroundBottom = [NSLayoutConstraint constraintWithItem:cSecondBackground attribute:NSLayoutAttributeBottom  relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.f constant:220.f ];
 
     NSLayoutConstraint *cSecondBackgroundRight = [NSLayoutConstraint constraintWithItem:cSecondBackground attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1.f constant:120.f ];
 
@@ -88,18 +89,42 @@
 
     self.eventNameFieldCenterYConstraint = [NSLayoutConstraint constraintWithItem:self.eventNameField attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.f constant:0];
 
-    NSLayoutConstraint *eventNameFieldLeading = [NSLayoutConstraint constraintWithItem:self.eventNameField attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0 ];
+    NSLayoutConstraint *eventNameFieldLeadingConstraint = [NSLayoutConstraint constraintWithItem:self.eventNameField attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0 ];
 
-    NSLayoutConstraint *eventNameFieldCenterX = [NSLayoutConstraint constraintWithItem:self.eventNameField attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0 ];
+    NSLayoutConstraint *eventNameFieldTrailingConstraint= [NSLayoutConstraint constraintWithItem:self.eventNameField attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0 ];
 
+#pragma mark - bodyView
+
+    self.bodyView = [[UIView alloc] init];
+    self.bodyView.backgroundColor = [UIColor whiteColor];
+    self.bodyView.layer.cornerRadius = 15.f;
+    self.bodyView.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+    self.bodyView.layer.shadowOpacity = 0.1f;
+    self.bodyView.layer.shadowRadius = 5.0f;
+    self.bodyView.translatesAutoresizingMaskIntoConstraints = false;
+
+    NSLayoutConstraint *bodyViewLeadingConstraint = [NSLayoutConstraint constraintWithItem:self.bodyView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.f constant:16.f ];
+
+    NSLayoutConstraint *bodyViewTrailingConstraint = [NSLayoutConstraint constraintWithItem:self.bodyView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.f constant:-16.f ];
+
+    self.bodyViewTopConstraint = [NSLayoutConstraint constraintWithItem:self.bodyView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.eventLabel attribute:NSLayoutAttributeBottom multiplier:1.f constant:800.f ];
+
+    NSLayoutConstraint *bodyViewBottomConstraint = [NSLayoutConstraint constraintWithItem:self.bodyView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.f constant:-16.f ];
+
+
+
+    [self.view addSubview:self.bodyView];
     [self.view addSubview:cFirstBackground];
     [self.view addSubview:cSecondBackground];
     [self.view addSubview:self.cancelButton];
     [self.view addSubview:self.eventLabel];
     [self.view addSubview: self.eventNameField];
 
-    [self.view addConstraints:@[cancelButtonLeftConstraint, self.cancelButtonTopConstrain, cFirstBackgroundTop, cFirstBackgroundLeft, cSecondBackgroundBottom, cSecondBackgroundRight, self.eventNameFieldCenterYConstraint, eventNameFieldCenterX, eventNameFieldLeading, eventLabelTopConstraint, eventLabelCenterXConstraint ]];
+    [self.view addConstraints:@[cancelButtonLeftConstraint, self.cancelButtonTopConstrain, cFirstBackgroundTop, cFirstBackgroundLeft, cSecondBackgroundBottom, cSecondBackgroundRight, self.eventNameFieldCenterYConstraint, eventNameFieldTrailingConstraint, eventNameFieldLeadingConstraint, eventLabelTopConstraint, eventLabelCenterXConstraint, bodyViewLeadingConstraint, bodyViewTrailingConstraint, bodyViewBottomConstraint, self.bodyViewTopConstraint ]];
+
 }
+
+#pragma mark - viewDidAppear
 
 - (void)viewDidAppear:(BOOL)animated {
 
@@ -144,11 +169,15 @@
     logoLetter.frame = CGRectMake(0, 0, 70.f, 70.f);
     logoLetter.font = [UIFont fontWithName:@"Montserrat-Regular" size:40.f];
 
+
+
     [self.view addSubview:self.doneButton];
     [self.view addSubview:self.logoView];
     [self.logoView addSubview:logoLetter];
 
     [self.view addConstraints:@[doneButtonRight, self.doneButtonTopConstrain, self.logoViewTopConstrain, logoViewCenterXConstraint, logoViewWidthConstraint, logoViewHeightConstraint ]];
+
+
 }
 
 #pragma mark - textFieldDidBeginEditing
@@ -160,6 +189,7 @@
     self.cancelButtonTopConstrain.constant = -50.f;
     self.doneButtonTopConstrain.constant = -50.f;
     self.eventNameFieldCenterYConstraint.constant = -40.f;
+    self.bodyViewTopConstraint.constant = 800.f;
 
     [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         [self.view layoutIfNeeded];
@@ -183,6 +213,7 @@
         self.doneButtonTopConstrain.constant = 45.f;
         self.cancelButtonTopConstrain.constant = 73.f;
         self.eventNameFieldCenterYConstraint.constant = -(self.view.frame.size.height / 2) + 140.f;
+        self.bodyViewTopConstraint.constant = 42.f;
 
         [UIView animateWithDuration:0.5f delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             [self.view layoutIfNeeded];
