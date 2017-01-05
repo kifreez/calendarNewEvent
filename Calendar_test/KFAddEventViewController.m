@@ -7,6 +7,7 @@
 //
 
 #import "KFAddEventViewController.h"
+#import "KFAddEventViewFactory.h"
 
 @interface KFAddEventViewController () 
 

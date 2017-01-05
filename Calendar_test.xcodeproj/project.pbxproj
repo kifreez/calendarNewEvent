@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		1F1C67821E16E299008EC714 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1C67811E16E299008EC714 /* main.m */; };
 		1F1C67851E16E299008EC714 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1C67841E16E299008EC714 /* AppDelegate.m */; };
-		1F1C67881E16E299008EC714 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1C67871E16E299008EC714 /* ViewController.m */; };
 		1F1C678B1E16E299008EC714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1C67891E16E299008EC714 /* Main.storyboard */; };
 		1F1C678D1E16E299008EC714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F1C678C1E16E299008EC714 /* Assets.xcassets */; };
 		1F1C67901E16E299008EC714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1C678E1E16E299008EC714 /* LaunchScreen.storyboard */; };
+		1F4580271E1EA6FB00F20E90 /* KFAddEventViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4580261E1EA6FB00F20E90 /* KFAddEventViewFactory.m */; };
 		1FE88A2C1E17001B00C37A31 /* KFAddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE88A2B1E17001B00C37A31 /* KFAddEventViewController.m */; };
 		1FF8A2411E19EEBC00F6C238 /* Montserrat-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FF8A23B1E19EDC300F6C238 /* Montserrat-ExtraLight.otf */; };
 		1FF8A2421E19EEBC00F6C238 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FF8A23E1E19EDC300F6C238 /* Montserrat-Regular.otf */; };
@@ -24,12 +24,12 @@
 		1F1C67811E16E299008EC714 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1F1C67831E16E299008EC714 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1F1C67841E16E299008EC714 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1F1C67861E16E299008EC714 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1F1C67871E16E299008EC714 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1F1C678A1E16E299008EC714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F1C678C1E16E299008EC714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F1C678F1E16E299008EC714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F1C67911E16E299008EC714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F4580251E1EA6FB00F20E90 /* KFAddEventViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFAddEventViewFactory.h; sourceTree = "<group>"; };
+		1F4580261E1EA6FB00F20E90 /* KFAddEventViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFAddEventViewFactory.m; sourceTree = "<group>"; };
 		1FE88A2A1E17001B00C37A31 /* KFAddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFAddEventViewController.h; sourceTree = "<group>"; };
 		1FE88A2B1E17001B00C37A31 /* KFAddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFAddEventViewController.m; sourceTree = "<group>"; };
 		1FF8A23B1E19EDC300F6C238 /* Montserrat-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.otf"; sourceTree = "<group>"; };
@@ -71,6 +71,8 @@
 				1F1C67831E16E299008EC714 /* AppDelegate.h */,
 				1F1C67841E16E299008EC714 /* AppDelegate.m */,
 				1FE88A331E17CE9C00C37A31 /* ViewControllers */,
+				1F4580251E1EA6FB00F20E90 /* KFAddEventViewFactory.h */,
+				1F4580261E1EA6FB00F20E90 /* KFAddEventViewFactory.m */,
 				1F1C67891E16E299008EC714 /* Main.storyboard */,
 				1F1C678C1E16E299008EC714 /* Assets.xcassets */,
 				1F1C678E1E16E299008EC714 /* LaunchScreen.storyboard */,
@@ -91,8 +93,6 @@
 		1FE88A331E17CE9C00C37A31 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1F1C67861E16E299008EC714 /* ViewController.h */,
-				1F1C67871E16E299008EC714 /* ViewController.m */,
 				1FE88A2A1E17001B00C37A31 /* KFAddEventViewController.h */,
 				1FE88A2B1E17001B00C37A31 /* KFAddEventViewController.m */,
 			);
@@ -185,8 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F1C67881E16E299008EC714 /* ViewController.m in Sources */,
 				1FE88A2C1E17001B00C37A31 /* KFAddEventViewController.m in Sources */,
+				1F4580271E1EA6FB00F20E90 /* KFAddEventViewFactory.m in Sources */,
 				1F1C67851E16E299008EC714 /* AppDelegate.m in Sources */,
 				1F1C67821E16E299008EC714 /* main.m in Sources */,
 			);
