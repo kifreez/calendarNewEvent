@@ -10,15 +10,16 @@
 
 @interface KFAddEventViewController : UIViewController <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (strong, nonatomic) UITextField *eventNameField;
-@property (strong, nonatomic) UIButton *cancelButton;
-@property (strong, nonatomic) UIButton *doneButton;
-@property (strong, nonatomic) UIView *logoView;
 @property (strong, nonatomic) UILabel *eventLabel;
+@property (strong, nonatomic) UITextField *eventNameField;
 @property (strong, nonatomic) UIView *bodyView;
-@property (strong, nonatomic) IBOutlet UIPickerView *pickerView;
-@property (strong, nonatomic) NSArray *pickerViewItems;
 @property (strong, nonatomic) UILabel *monthNameLabel;
+@property (strong, nonatomic) IBOutlet UIPickerView *pickerView;
+
+//@property (strong, nonatomic) UIButton *cancelButton;
+//@property (strong, nonatomic) UIButton *doneButton;
+@property (strong, nonatomic) UIView *logoView;
+@property (strong, nonatomic) NSArray *pickerViewItems;
 @property (strong, nonatomic) UILabel *dayOfWeekNameLabel;
 @property (strong, nonatomic) UIButton *moreButton;
 @property (strong, nonatomic) UILabel *timeLabel;
